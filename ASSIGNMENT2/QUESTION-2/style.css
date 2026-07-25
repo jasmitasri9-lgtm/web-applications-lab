@@ -1,0 +1,751 @@
+/* =========================
+   RESET & BODY
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background: #f8fafc;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #ffffff;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 18px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.college-name {
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #4f46e5;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #172033;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4f46e5;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 60px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(79, 70, 229, 0.9),
+            rgba(14, 165, 233, 0.8)
+        ),
+        url("https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-content span {
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 75px;
+
+    margin: 15px 0;
+
+    font-weight: 900;
+}
+
+.hero-content p {
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+.hero-details {
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin-bottom: 35px;
+}
+
+.register-button {
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    background: white;
+
+    color: #4f46e5;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    background: #172033;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 80px 25px;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #4f46e5;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+
+    margin-top: 8px;
+
+    color: #172033;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: white;
+}
+
+.about-layout {
+    display: flex;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+
+    color: #475569;
+}
+
+.about-text h3 {
+    margin: 25px 0 10px;
+
+    color: #4f46e5;
+}
+
+.about-text ol {
+    padding-left: 20px;
+
+    color: #475569;
+}
+
+.about-highlights {
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.about-highlights div {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #eef2ff;
+
+    border-radius: 12px;
+}
+
+.about-highlights strong {
+    display: block;
+
+    font-size: 38px;
+
+    color: #4f46e5;
+}
+
+.about-highlights span {
+    color: #64748b;
+}
+
+
+/* =========================
+   SCHEDULE
+========================= */
+
+.schedule {
+    max-width: none;
+
+    background: #f1f5f9;
+}
+
+.schedule-table {
+    max-width: 1100px;
+
+    margin: auto;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+}
+
+th,
+td {
+    padding: 17px;
+
+    border: 1px solid #e2e8f0;
+
+    text-align: left;
+}
+
+th {
+    background: #4f46e5;
+
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+tr:hover {
+    background: #eef2ff;
+}
+
+
+/* =========================
+   EVENTS
+========================= */
+
+.events {
+    background: white;
+}
+
+.event-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.event-card {
+    position: relative;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    transition: 0.3s;
+
+    overflow: hidden;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 30px rgba(79, 70, 229, 0.12);
+}
+
+.event-number {
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    font-size: 14px;
+
+    color: #94a3b8;
+
+    font-weight: bold;
+}
+
+.event-symbol {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    color: #64748b;
+
+    margin-bottom: 20px;
+}
+
+.event-card a {
+    text-decoration: none;
+
+    color: #4f46e5;
+
+    font-weight: bold;
+}
+
+.event-card a:hover {
+    color: #0ea5e9;
+}
+
+.technical {
+    border-top: 4px solid #4f46e5;
+}
+
+.cultural {
+    border-top: 4px solid #ec4899;
+}
+
+
+/* =========================
+   REGISTRATION
+========================= */
+
+.registration {
+    max-width: 850px;
+}
+
+.registration-form {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+
+    gap: 20px;
+}
+
+.form-row div {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.registration-form label {
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+.registration-form input:focus,
+.registration-form select:focus,
+.registration-form textarea:focus {
+    border-color: #4f46e5;
+}
+
+.registration-form textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+.registration-form button {
+    margin-top: 10px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.registration-form button:hover {
+    background: #3730a3;
+}
+
+
+/* =========================
+   TEAM
+========================= */
+
+.team {
+    background: #f1f5f9;
+}
+
+.team-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.team-member {
+    flex: 1 1 220px;
+
+    max-width: 260px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.avatar {
+    width: 80px;
+
+    height: 80px;
+
+    margin: auto auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eef2ff;
+
+    font-size: 40px;
+}
+
+.team-member h3 {
+    color: #172033;
+}
+
+.team-member p {
+    color: #4f46e5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #172033;
+
+    color: white;
+
+    padding: 50px 25px 20px;
+}
+
+.footer-container {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.footer-container h2 {
+    color: #818cf8;
+
+    margin-bottom: 10px;
+}
+
+.footer-container h3 {
+    color: #38bdf8;
+
+    margin-bottom: 10px;
+}
+
+.footer-container p {
+    color: #cbd5e1;
+}
+
+.footer-container ul {
+    list-style: none;
+}
+
+.footer-container a {
+    color: #cbd5e1;
+
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    color: #38bdf8;
+}
+
+.copyright {
+    max-width: 1150px;
+
+    margin: 35px auto 0;
+
+    padding-top: 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #334155;
+
+    color: #94a3b8;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .about-layout {
+        flex-direction: column;
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 8px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 21px;
+    }
+
+    .section {
+        padding: 60px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
