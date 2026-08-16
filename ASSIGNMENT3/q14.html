@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grade Calculator</title>
+</head>
+<body>
+
+    <h1>Student Result Calculator</h1>
+
+    <input type="number" id="m1" placeholder="Subject 1 Marks">
+    <input type="number" id="m2" placeholder="Subject 2 Marks">
+    <input type="number" id="m3" placeholder="Subject 3 Marks">
+    <input type="number" id="m4" placeholder="Subject 4 Marks">
+    <input type="number" id="m5" placeholder="Subject 5 Marks">
+
+    <button onclick="calculateResult()">Calculate Result</button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateTotal(marks) {
+            let total = 0;
+
+            for (let mark of marks) {
+                total += mark;
+            }
+
+            return total;
+        }
+
+        function calculateAverage(total, subjects) {
+            return total / subjects;
+        }
+
+        function calculatePercentage(total, maximum) {
+            return (total / maximum) * 100;
+        }
+
+        function calculateGrade(percentage) {
+            if (percentage >= 90) {
+                return "A+";
+            } else if (percentage >= 80) {
+                return "A";
+            } else if (percentage >= 70) {
+                return "B";
+            } else if (percentage >= 60) {
+                return "C";
+            } else if (percentage >= 50) {
+                return "D";
+            } else {
+                return "F";
+            }
+        }
+
+        function calculateResult() {
+            let marks = [
+                Number(document.getElementById("m1").value),
+                Number(document.getElementById("m2").value),
+                Number(document.getElementById("m3").value),
+                Number(document.getElementById("m4").value),
+                Number(document.getElementById("m5").value)
+            ];
+
+            let total = calculateTotal(marks);
+            let average = calculateAverage(total, 5);
+            let percentage = calculatePercentage(total, 500);
+            let grade = calculateGrade(percentage);
+
+            document.getElementById("result").innerHTML =
+                "<h3>Student Result</h3>" +
+                "<p>Total Marks: " + total + " / 500</p>" +
+                "<p>Average: " + average.toFixed(2) + "</p>" +
+                "<p>Percentage: " + percentage.toFixed(2) + "%</p>" +
+                "<p>Grade: " + grade + "</p>";
+        }
+    </script>
+
+</body>
+</html>
