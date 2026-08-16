@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+</head>
+<body>
+
+    <h1>Temperature Conversion</h1>
+    <div id="output"></div>
+
+    <script>
+        function celsiusToFahrenheit(celsius) {
+            return (celsius * 9 / 5) + 32;
+        }
+
+        function fahrenheitToCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5 / 9;
+        }
+
+        let celsius = 25;
+        let fahrenheit = 98.6;
+
+        document.getElementById("output").innerHTML =
+            "<p>" + celsius + "°C = " +
+            celsiusToFahrenheit(celsius).toFixed(2) + "°F</p>" +
+
+            "<p>" + fahrenheit + "°F = " +
+            fahrenheitToCelsius(fahrenheit).toFixed(2) + "°C</p>";
+    </script>
+
+</body>
+</html>
