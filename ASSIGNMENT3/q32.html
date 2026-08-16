@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouseover Event</title>
+</head>
+<body>
+
+    <h1>Mouseover Event</h1>
+
+    <button
+        onmouseover="changeBackground()"
+        onmouseout="resetBackground()">
+        Move Mouse Over Me
+    </button>
+
+    <script>
+        function changeBackground() {
+            document.body.style.backgroundColor = "lightblue";
+        }
+
+        function resetBackground() {
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+
+</body>
+</html>
