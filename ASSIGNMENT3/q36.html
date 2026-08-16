@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+</head>
+<body>
+
+    <h1>Counter</h1>
+
+    <h2 id="counter">0</h2>
+
+    <button id="increment">Increment</button>
+    <button id="decrement">Decrement</button>
+
+    <script>
+        let count = 0;
+
+        const counter =
+            document.getElementById("counter");
+
+        document.getElementById("increment")
+            .addEventListener("click", function() {
+
+                count++;
+                counter.innerHTML = count;
+            });
+
+        document.getElementById("decrement")
+            .addEventListener("click", function() {
+
+                count--;
+                counter.innerHTML = count;
+            });
+    </script>
+
+</body>
+</html>
