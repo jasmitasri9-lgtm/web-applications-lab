@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Natural Number Sum</title>
+</head>
+<body>
+
+    <h1>Sum of First N Natural Numbers</h1>
+
+    <input type="number" id="number" placeholder="Enter N">
+    <button onclick="calculateSum()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculateSum() {
+            let n = Number(document.getElementById("number").value);
+            let sum = 0;
+
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Sum of first " + n +
+                " natural numbers is " + sum;
+        }
+    </script>
+
+</body>
+</html>
