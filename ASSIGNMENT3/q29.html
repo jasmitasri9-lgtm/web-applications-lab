@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <h1>Form Validation</h1>
+
+    <form onsubmit="return validateForm()">
+
+        <label>Name:</label>
+        <input type="text" id="name">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="text" id="email">
+        <br><br>
+
+        <label>Mobile Number:</label>
+        <input type="text" id="mobile">
+        <br><br>
+
+        <label>PIN Code:</label>
+        <input type="text" id="pin">
+        <br><br>
+
+        <button type="submit">Validate</button>
+
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function validateForm() {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+            let pin = document.getElementById("pin").value;
+
+            let namePattern = /^[A-Za-z ]+$/;
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let mobilePattern = /^[0-9]{10}$/;
+            let pinPattern = /^[0-9]{6}$/;
+
+            if (!namePattern.test(name)) {
+                document.getElementById("result").innerHTML =
+                    "Invalid Name";
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                document.getElementById("result").innerHTML =
+                    "Invalid Email";
+                return false;
+            }
+
+            if (!mobilePattern.test(mobile)) {
+                document.getElementById("result").innerHTML =
+                    "Invalid Mobile Number";
+                return false;
+            }
+
+            if (!pinPattern.test(pin)) {
+                document.getElementById("result").innerHTML =
+                    "Invalid PIN Code";
+                return false;
+            }
+
+            document.getElementById("result").innerHTML =
+                "All details are valid.";
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>
