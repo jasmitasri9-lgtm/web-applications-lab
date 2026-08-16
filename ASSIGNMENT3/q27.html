@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Strong Password Validation</title>
+</head>
+<body>
+
+    <h1>Strong Password Checker</h1>
+
+    <input type="password" id="password" placeholder="Enter password">
+
+    <button onclick="validatePassword()">Validate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function validatePassword() {
+
+            let password = document.getElementById("password").value;
+
+            let pattern =
+                /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+            if (pattern.test(password)) {
+                document.getElementById("result").innerHTML =
+                    "Strong Password";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "Password must contain at least 8 characters, " +
+                    "one uppercase, one lowercase, one digit, " +
+                    "and one special character.";
+            }
+        }
+    </script>
+
+</body>
+</html>
