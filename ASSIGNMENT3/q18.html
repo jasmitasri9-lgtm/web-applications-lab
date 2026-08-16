@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+</head>
+<body>
+
+    <h1>JavaScript Counter</h1>
+
+    <h2 id="count">0</h2>
+
+    <button onclick="increment()">Increment</button>
+    <button onclick="decrement()">Decrement</button>
+    <button onclick="resetCounter()">Reset</button>
+
+    <script>
+        let count = 0;
+
+        function updateDisplay() {
+            document.getElementById("count").innerHTML = count;
+        }
+
+        function increment() {
+            count++;
+            updateDisplay();
+        }
+
+        function decrement() {
+            count--;
+            updateDisplay();
+        }
+
+        function resetCounter() {
+            count = 0;
+            updateDisplay();
+        }
+    </script>
+
+</body>
+</html>
