@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rectangle Calculator</title>
+</head>
+<body>
+
+    <h1>Rectangle Area and Perimeter</h1>
+    <div id="output"></div>
+
+    <script>
+        let length = 10;
+        let width = 5;
+
+        function calculateArea(l, w) {
+            return l * w;
+        }
+
+        function calculatePerimeter(l, w) {
+            return 2 * (l + w);
+        }
+
+        document.getElementById("output").innerHTML =
+            "<p>Length: " + length + "</p>" +
+            "<p>Width: " + width + "</p>" +
+            "<p>Area: " + calculateArea(length, width) + "</p>" +
+            "<p>Perimeter: " + calculatePerimeter(length, width) + "</p>";
+    </script>
+
+</body>
+</html>
