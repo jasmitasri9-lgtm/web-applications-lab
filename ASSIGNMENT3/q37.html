@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Enter and Leave</title>
+
+    <style>
+        #box {
+            width: 400px;
+            height: 200px;
+            border: 2px solid black;
+            text-align: center;
+            padding-top: 50px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Interactive Background</h1>
+
+    <div id="box">
+        Move your mouse into this box.
+    </div>
+
+    <script>
+        let box = document.getElementById("box");
+
+        box.addEventListener("mouseenter", function() {
+            document.body.style.backgroundColor = "lightgreen";
+        });
+
+        box.addEventListener("mouseleave", function() {
+            document.body.style.backgroundColor = "white";
+        });
+    </script>
+
+</body>
+</html>
