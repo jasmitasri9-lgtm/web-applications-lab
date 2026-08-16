@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Text Change</title>
+</head>
+<body>
+
+    <h1 id="heading">Original Text</h1>
+
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("heading").innerHTML =
+                "The text has been changed dynamically!";
+        }
+    </script>
+
+</body>
+</html>
