@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Coordinates</title>
+
+    <style>
+        #area {
+            width: 500px;
+            height: 300px;
+            border: 2px solid black;
+            margin-top: 20px;
+            text-align: center;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mouse Coordinates</h1>
+
+    <p id="coordinates">Move your mouse inside the box.</p>
+
+    <div id="area">
+        Move Mouse Here
+    </div>
+
+    <script>
+        document.getElementById("area").addEventListener(
+            "mousemove",
+            function(event) {
+
+                let x = event.offsetX;
+                let y = event.offsetY;
+
+                document.getElementById("coordinates").innerHTML =
+                    "X Coordinate: " + x +
+                    " | Y Coordinate: " + y;
+            }
+        );
+    </script>
+
+</body>
+</html>
