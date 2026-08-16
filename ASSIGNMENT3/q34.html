@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Paragraph</title>
+</head>
+<body>
+
+    <h1>Event Handling</h1>
+
+    <p id="message">
+        This is the original paragraph.
+    </p>
+
+    <button onclick="changeParagraph()">
+        Change Text
+    </button>
+
+    <script>
+        function changeParagraph() {
+
+            document.getElementById("message").innerHTML =
+                "The paragraph text has been changed!";
+        }
+    </script>
+
+</body>
+</html>
